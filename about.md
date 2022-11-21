@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hello! I am glad you ended up here! Let me share a few words about myself.
 
 ### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+As explained in the blog page, the goal is to give back a little bit of what I got from the ML, software, infrastructure, and data communities.
+This is a journey for me, and I will do tons of mistakes. Only through your feedbacks, things can improve. Self-supervised learning is great, but as I don't have access to TBs of data (nor the computational capacity to process it) a bit of supervision won't harm.
 
 ### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+For any feedback, request, or comment, please reach out on Linkedin or via email.
+[email@domain.com](mailto:marinone94@gmail.com)
