@@ -12,4 +12,4 @@ This is a journey for me, and I will do tons of mistakes. Only through your feed
 
 ### Contact me
 For any feedback, request, or comment, please reach out on Linkedin or via email.
-[email@domain.com](mailto:marinone94@gmail.com)
+[marinone94@gmail.com](mailto:marinone94@gmail.com)
