@@ -369,7 +369,12 @@ Each transcript was closed with a `"<|endoftranscript|>"` token (EOS). An EOS to
 ## Example
 Let's put all the pieces together. We will use the Huggingface implementation to transcribe the audio file used by OpenAI to test their codebase.
 
-![audio sample]("https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/audio/whisper_paper/jfk.flac")
+<div class="audio-div-any-width" markdown="0">
+<audio controls width="100%" height="auto">
+  <source src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/audio/whisper_paper/jfk.flac" type="audio/flac">
+Your browser does not support the audio element.
+</audio>
+</div>
 
 Note that, at the time of writing, this implementation does not allow to include timestamps which means they will be skipped even if we don't set the `"<|notimestamps|>"` input token.
 
@@ -483,7 +488,7 @@ raw_transcription
 As you can see in this simple code snippet, the processor prepares the input for the model, which consumes the input features and initialization tokens to generate the transcription. The generated transcript is already capitalized, and includes punctuation, since the model has been trained to predict both.
 
 <div class="video-div-any-width" markdown="0">
-<video autoplay controls muted playsinline loop poster="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/audio-transcript.png">
+<video autoplay controls muted playsinline loop poster="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/audio-transcript.png" width="100%" height="auto">
   <source src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/animations/whisper_paper/end_to_end.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
