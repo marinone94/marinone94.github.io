@@ -46,13 +46,13 @@ Whisper training is weakly supervised, meaning that - in most of the training da
 
 Models of different dimensions have been trained and evaluated, as illustrated in this table.
 
-| Model   |         Parameters |
-|:--------|:------- |:-------|
-| Tiny    |         39M        |
-| Base    |         74M        |
-| Small   |         244M       |
-| Medium  |         769M       |
-| Large   |         1550M      |
+| Model   | Parameters |
+|:--------|:-----------|
+| Tiny    | 39M        |
+| Base    | 74M        |
+| Small   | 244M       |
+| Medium  | 769M       |
+| Large   | 1550M      |
 
 The large model achieves great zero-shot results on gold standard benchmarks. We will see more about the results later on, but first let's have a look at the training data.
 
