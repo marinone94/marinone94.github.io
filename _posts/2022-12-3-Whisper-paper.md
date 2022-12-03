@@ -40,7 +40,7 @@ In this paper, it is shown that ASR models pretrained with full or weak supervis
 Whisper training is weakly supervised, meaning that - in most of the training dataset - the only information available is the input audio and the corresponding transcript.
 
 <div class="img-div-any-width" markdown="0">
-  <img src="{{ assetsurl }}/img/whisper_paper/audio-transcript.png" />
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/audio-transcript.png" />
   <br />
 
 </div>
@@ -95,7 +95,7 @@ As usual in ML, the input is first transformed into a suitable form: for example
 Encoder-only models propagate the whole input through the encoder at once, and its output is then passed through the model's head, which is designed and trained to solve one or more specific tasks.
 
 <div class="img-div-any-width" markdown="0">
-  <img src="{{ assetsurl }}/img/whisper_paper/encoder.png" />
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/encoder.png" />
   <br />
 
 </div>
@@ -103,7 +103,7 @@ Encoder-only models propagate the whole input through the encoder at once, and i
 Decoder-only models are similar, but the output is generated one step at the time, thus the model cannot look at future values. Each newly generated output is concatenated to its input, and used as input in the next iteration.
 
 <div class="img-div-any-width" markdown="0">
-  <img src="{{ assetsurl }}/img/whisper_paper/decoder.png" />
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/decoder.png" />
   <br />
 
 </div>
@@ -111,7 +111,7 @@ Decoder-only models are similar, but the output is generated one step at the tim
 Encoder-decoder models like the origianl Transformer, Whisper, and many others, are often used to solve sequence-to-sequence tasks (speech-to-text, translation, summarization, ...) and combine both blocks. The whole input is first passed through the encoder, and the encoder output is passed to each of the decoder's layers. The decoder receives also its own input sequence, which is used to predict the next token, together with the information received by the encoder. The predicted token gets concatenated to the previous ones, and the new sequence is passed through the decoder again. This process continues until an *<< end of sequence >>* token is predicted, or other stopping criteria is fulfilled.
 
 <div class="img-div-any-width" markdown="0">
-  <img src="{{ assetsurl }}/img/whisper_paper/encoder-decoder.png" />
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/encoder-decoder.png" />
   <br />
 
 </div>
@@ -138,7 +138,7 @@ I understood the log-mel spectrogram thanks to [Leland Robert's great article](h
 
 The following image is converted to decibels for visualization.
 <div class="img-div-any-width" markdown="0">
-  <img src="{{ assetsurl }}/img/whisper_paper/mel_spec.png" />
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/mel_spec.png" />
   <br />
 
 </div>
@@ -369,7 +369,7 @@ Each transcript was closed with a `"<|endoftranscript|>"` token (EOS). An EOS to
 ## Example
 Let's put all the pieces together. We will use the Huggingface implementation to transcribe the audio file used by OpenAI to test their codebase.
 
-![audio sample]("/assets/audio/whisper_paper/jfk.flac")
+![audio sample]("https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/audio/whisper_paper/jfk.flac")
 
 Note that, at the time of writing, this implementation does not allow to include timestamps which means they will be skipped even if we don't set the `"<|notimestamps|>"` input token.
 
@@ -482,7 +482,12 @@ raw_transcription
 
 As you can see in this simple code snippet, the processor prepares the input for the model, which consumes the input features and initialization tokens to generate the transcription. The generated transcript is already capitalized, and includes punctuation, since the model has been trained to predict both.
 
-![example-animation](/assets/animations/whisper_paper/end_to_end.mp4)
+<div class="video-div-any-width" markdown="0">
+<video autoplay controls muted playsinline loop poster="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/audio-transcript.png">
+  <source src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/animations/whisper_paper/end_to_end.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
 
 ## Evaluation
 Alright, President JFK's speech transcription was fairly accurate, almost perfect. Including excellent punctuation. But how does the model behave on other inputs? And what about other languages? And how does it transcribe in English? Thankfully, Whisper's authors have provided us with an extensive evaluation of the model's performance. Most of the paper is about this, as it is interesting for end-users and the entire ML community. If you are interested into details about all the experiments, I really encourage you to read the evaluation chapter in the paper. In this chapter we will go through their main findings.
