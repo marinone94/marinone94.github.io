@@ -84,7 +84,7 @@ Nice, now we have an idea about the fuel. But what about the engine? Well, let's
 ## Model
 As the research goal was to focus more on the impact of the training process, the authors chose a standard [encoder-decoder transformer model architecture](https://arxiv.org/pdf/1706.03762.pdf), which has been shown to scale reliably. We will dive deep into its structure in one of the future posts, where we will investigate the impact of fine-tuning and optimization techniques. In this article, we will go through the main architectural components to get the big picture, but an excellent (illustrated) deep dive is provided by Jay Alammar in his notorious blog post: [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/).
 
-Readers who are not interested in the model architecture can just have a look at the overall architecture diagram LINK PICTURE and continue reading the [Tasks](#tasks) and [Evaluation](#evaluation) chapters. 
+Readers who are not interested in the model architecture can just have a look at the overall architecture diagram and continue reading the [Tasks](#tasks) and [Evaluation](#evaluation) chapters.
 
 ### Transformer models
 Transformer models are based on the attention mechanism, thanks to which they learn how different input features relate with each, or as the name suggests, what to pay more attention to. An excellent (visual) deep dive is provided by Jay Alammar in his notorious blog post: [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/). 
