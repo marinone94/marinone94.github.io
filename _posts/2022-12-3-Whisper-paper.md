@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Yoho! Welcome!
+title: Intro to Whisper paper
 ---
 
 # Whisper summary
