@@ -43,7 +43,6 @@ Whisper training is weakly supervised, meaning that - in most of the training da
   <br />
 
 </div>
-
 Models of different dimensions have been trained and evaluated, as illustrated in this table.
 
 | Model   | Parameters |
