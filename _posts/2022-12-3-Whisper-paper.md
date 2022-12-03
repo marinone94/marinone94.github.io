@@ -3,7 +3,6 @@ layout: post
 title: Intro to Whisper paper
 ---
 
-# Whisper summary
 In this article, we will go through the main concepts and findings related to the latest end-to-end speech recognition model developed by OpenAI: **[Whisper](https://cdn.openai.com/papers/whisper.pdf)**. The goal of the research was to develop a single robust speech processing system that works reliably without the need for dataset specific fine-tuning to achieve high-quality results on specific distributions. Keep this in mind while reading. Code and model weights have been published on [Github](https://github.com/openai/whisper).
 
 This article aims to summarize and simplify the paper by touching on the key concepts, explaining how the model transcribes the audio input at high-level, and presenting the  most important reuslts in a way suitable for an audience not necessarly used to read ML papers.
