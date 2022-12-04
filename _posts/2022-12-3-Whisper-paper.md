@@ -533,12 +533,12 @@ Domain adaptation will certainly boost performance with specific distributions, 
 This is my first article, and I am glad you arrived at the end. As any good Learning system, I will both use self-supervision and your feedback to improve. So, please, reach out to share your feedback, it will be much appreciated and helpful.
 
 I consider Whisper a milestone of open-source speech recognition, and I can't wait to see its impact on society. In part because of my work, and in part because of my interest in knowledge sharing, I will continue my deep dive into the model and write about, among others:
-* :hugs: Whisper implementation
+* 🤗 Whisper implementation
 * Decoding strategies: their impact on Whisper
 * Latency and footprint of base and inference-optimized models
 * Can Norwegian training boost Swedish performance? The impact of language families on finetuning Whisper
 * The impact of Knowledge Distillation on Whisper's performance, latency, and footprint
 
-Please let me know if you would like to know more about aspects of the model, I have surely missed many interesting questions. **I received A LOT from the ML community: it is time to give something back.**
+Please let me know if you would like to know more about some other aspects of the model, I have surely missed many interesting questions. **I received A LOT from the ML community: it is time to give something back.**
 
 Thanks.
