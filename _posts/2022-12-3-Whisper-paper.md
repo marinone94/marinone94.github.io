@@ -151,7 +151,8 @@ This is how the data representing 11 seconds of audio changes when transformed i
 >>> from transformers import WhisperProcessor
 
 # Load AND RESAMPLE input audio
->>> data, samplerate = librosa.load("./assets/audio/whisper_paper/jfk.flac", sr=16.000)
+path = "./assets/audio/whisper_paper/jfk.flac"
+>>> data, samplerate = librosa.load(path, sr=16000)
 >>> samplerate
 16000
 >>> data.shape
@@ -160,17 +161,22 @@ This is how the data representing 11 seconds of audio changes when transformed i
 (0.78274125, -0.72361434, 1.3705251e-05, 0.1421046)
 
 # Compute log-mel spectrogram
->>> processor = WhisperProcessor.from_pretrained("openai/whisper-large")
->>> input_features = processor(data, return_tensors="pt").input_features
+>>> processor = WhisperProcessor.from_pretrained(
+    "openai/whisper-large")
+>>> input_features = processor(
+    data, return_tensors="pt").input_features
 (tensor(1.4613), tensor(-0.5387), tensor(-0.2950), tensor(0.4221))
 
-# remember that all audio inputs are padded/trimmed to 30 seconds
-# 10 milliseconds stride means 100 samples per second are calculated
-# which translates to 3000 samples per 30 seconds of audio
+# remember that all audio inputs
+# are padded/trimmed to 30 seconds
+# 10 milliseconds stride means 100 samples per second
+# are calculated, which translates to 
+# 3000 samples per 30 seconds of audio
 >>> input_features.shape
 torch.Size([1, 80, 3000])
 
-# WhisperProcessor handles input in batches, so we just look at the first (and only) batch element
+# WhisperProcessor handles input in batches,
+# so we just look at the first (and only) batch element
 >>> input_features[0].shape
 torch.Size([80, 3000])
 
@@ -182,12 +188,17 @@ Next, the log-mel spectrogram is filtered by two convolution layers with a filte
 ```python
 # Import libraries
 >>> from torch.nn.functional import gelu
->>> from transformers import WhisperProcessor, WhisperForConditionalGeneration
+>>> from transformers import (
+    WhisperProcessor,
+    WhisperForConditionalGeneration
+)
 
 # Load model and apply convolution
->>> model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large")
+>>> model = WhisperForConditionalGeneration.from_pretrained(
+    "openai/whisper-large")
 
->>> conv_1_output = gelu(model.model.encoder.conv1(input_features))
+>>> conv_1_output = gelu(
+    model.model.encoder.conv1(input_features))
 >>> conv_1_output.shape
 torch.Size([1, 1280, 3000])
 >>> conv_1_output.max(), conv_1_output.min(), conv_1_output.mean(), conv_1_output.std()
@@ -196,7 +207,8 @@ torch.Size([1, 1280, 3000])
  tensor(0.0388, grad_fn=<MeanBackward0>),
  tensor(0.0838, grad_fn=<StdBackward0>))
 
->>> conv_2_output = gelu(model.model.encoder.conv2(conv_1_output))
+>>> conv_2_output = gelu(
+    model.model.encoder.conv2(conv_1_output))
 >>> conv_2_output.shape
 torch.Size([1, 1280, 1500])
 >>> conv_2_output.max(), conv_2_output.min(), conv_2_output.mean(), conv_2_output.std()
@@ -234,7 +246,7 @@ torch.Size([1500, 1280])
 >>> inputs_embeds.shape
 torch.Size([1, 1500, 1280])
 
-# Add positional information to the embeddings
+# Sum positional information and the embeddings
 >>> inputs_embeds = inputs_embeds + embed_pos
 >>> inputs_embeds.shape
 torch.Size([1, 1500, 1280])
@@ -258,12 +270,14 @@ As mentioned in the [Transformer models paragraph](#transformer-models), Machine
 ```python
 # Example sentence
 >>> original_input = "This is a tokenization example"
-# Split sentence into a list of tokens and map them to integers (token ids)
+# Split sentence into a list of tokens
+# and map them to integers (token ids)
 >>> token_ids = processor.tokenizer.encode(original_input)
 # Get list of tokens from token ids
 >>> tokens = processor.tokenizer.batch_decode(token_ids)
 # Reconstruct the whole sentence from token ids
->>> reconstructed_input = processor.tokenizer.decode(token_ids, skip_special_tokens=True)
+>>> reconstructed_input = processor.tokenizer.decode(
+    token_ids, skip_special_tokens=True)
 
 >>> original_input
 'This is a tokenization example.'
@@ -280,9 +294,11 @@ As mentioned in the [Transformer models paragraph](#transformer-models), Machine
 
 A token is simply the smallest unit the model is going to handle. A key parameter is the vocabulary size, which is the number of different tokens the tokenizer is aware of. Whisper uses the BPE tokenizer which was trained for [GPT-2](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) to process English text. Other languages use the same tokenizer, which is fit on the specific language but preserves the same size. The way tokenizers learn to split sentences into words or subwords goes beyond the scope of the article, but I hope you will soon understand how it fits into the picture.
 
-However, simply representing a text as a sequence of integers is not ideal. Think about this minimal example, and remember that models "simply" process numbers: 
+However, simply representing a text as a sequence of integers is not ideal. Think about this minimal example, and remember that models "simply" process numbers:
+
 ```python
->>> token_ids = tokenize(["Whisper", "is", "a", "great", "model"])
+>>> token_ids = tokenize(
+    ["Whisper", "is", "a", "great", "model"])
 >>> token_ids
 [1,2,3,4,5]
 ```
@@ -323,6 +339,7 @@ torch.Size([5,10])
 ```
 
 Much better. So, if we tokenize and embed `"This is a tokenization example"` using the large model's tokenizer and embedding layer, we get the following representations:
+
 ```python
 >>> tensor_token_ids = torch.tensor(token_ids)
 >>> tensor_token_ids
@@ -330,7 +347,8 @@ tensor([5723, 307, 257, 220, 83, 8406, 2144, 1365])
 >>> tensor_token_ids.shape
 torch.Size([8])
 
->>> embeddings = model.model.decoder.embed_tokens(tensor_token_ids)
+>>> embeddings = model.model.decoder.embed_tokens(
+    tensor_token_ids)
 >>> embeddings
 tensor([[-0.0014, -0.0077,  0.0017,  ..., -0.0049,  0.0080,  0.0095],
         [ 0.0061,  0.0101, -0.0050,  ...,  0.0026, -0.0058,  0.0113],
@@ -383,17 +401,26 @@ Model and processor implementation details will be covered in a future article.
 ```python
 # Import required packages
 >>> import librosa
->>> from transformers import WhisperProcessor, WhisperForConditionalGeneration
+>>> from transformers import (
+    WhisperProcessor,
+    WhisperForConditionalGeneration
+)
 
-# Load processor: feature processor (audio) + tokenizer (text)
->>> processor = WhisperProcessor.from_pretrained("openai/whisper-large")
+# Load processor:
+# feature processor (audio) + tokenizer (text)
+>>> processor = WhisperProcessor.from_pretrained(
+    "openai/whisper-large")
 
 # Load model architecture and weights
->>> model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large")
+>>> model = WhisperForConditionalGeneration.from_pretrained(
+    "openai/whisper-large")
 
 # Load audio file
->>> reference_transcription = "And so my fellow Americans, ask not what your country can do for you, ask what you can do for your country."
->>> data, samplerate = librosa.load("audio/whisper_paper/jfk.flac", sr=16000)
+>>> reference_transcription = "And so my fellow Americans, "
+"ask not what your country can do for you, "
+"ask what you can do for your country."
+>>> data, samplerate = librosa.load(
+    "audio/whisper_paper/jfk.flac", sr=16000)
 >>> data
 array([-3.1826513e-08, -5.7742401e-08, -6.5911493e-08, ...,
        -7.7829091e-03, -1.8314138e-02, -1.4547420e-02], dtype=float32)
@@ -407,7 +434,8 @@ array([-3.1826513e-08, -5.7742401e-08, -6.5911493e-08, ...,
 (0.78274125, -0.72361434, 1.3705251e-05, 0.1421046)
 
 # Convert input audio to log-mel spectrogram
->>> input_features = processor(data, return_tensors="pt").input_features
+>>> input_features = processor(
+    data, return_tensors="pt").input_features
 
 >>> input_features
 tensor([[[-0.5387, -0.5387, -0.5387,  ..., -0.5387, -0.5387, -0.5387],
@@ -425,14 +453,17 @@ torch.Size([1, 80, 3000])
 >>> input_features.max(), input_features.min(), input_features.mean(), input_features.std()
 (tensor(1.4613), tensor(-0.5387), tensor(-0.2950), tensor(0.4221))
 
-# Get tokens to initiate transcription and store them in the model config
->>> init_tokens = processor.get_decoder_prompt_ids(language="en", task="transcribe", no_timestamps=True)
+# Get tokens to initiate transcription
+# and store them in the model config
+>>> init_tokens = processor.get_decoder_prompt_ids(
+    language="en", task="transcribe", no_timestamps=True)
 >>> init_tokens
 [(1, 50259), (2, 50359), (3, 50363)]
 >>> [processor.tokenizer.decode(kv[1]) for kv in init_tokens]
 ['<|en|>', '<|transcribe|>', '<|notimestamps|>']
 
-# Under the hood, this will force the model to predict these tokens in the beginning of the transcription
+# Under the hood, this will force the model to predict
+# these tokens in the beginning of the transcription
 >>> model.config.forced_decoder_ids = init_tokens
 
 # Generate transcription tokens
@@ -453,7 +484,8 @@ torch.Size([1, 30])
 >>> transcription_token_ids.shape
 torch.Size([30])
 
->>> tokens = [processor.tokenizer.decode(token) for token in transcription_token_ids]
+>>> tokens = [processor.tokenizer.decode(token)
+              for token in transcription_token_ids]
 >>> tokens
 ['<|startoftranscript|>',
  '<|en|>',
@@ -472,11 +504,13 @@ torch.Size([30])
  '.',
  '<|endoftext|>']
 
->>> raw_transcription = processor.decode(transcription_token_ids)
+>>> raw_transcription = processor.decode(
+    transcription_token_ids)
 raw_transcription
 '<|startoftranscript|><|en|><|transcribe|><|notimestamps|> And so my fellow Americans, ask not what your country can do for you, asking what you can do for your country.<|endoftext|>'
 
->>> transcription = processor.decode(transcription_token_ids, skip_special_tokens=True)
+>>> transcription = processor.decode(
+    transcription_token_ids, skip_special_tokens=True)
 >>> transcription
 ' And so my fellow Americans, ask not what your country can do for you, asking what you can do for your country.'
 
