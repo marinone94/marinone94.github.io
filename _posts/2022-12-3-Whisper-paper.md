@@ -4,7 +4,7 @@ title: Intro to Whisper - the paper
 ---
 
 <div class="img-div-any-width" markdown="0">
-  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/audio-transcript.png" width="80%" height="auto"/>
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/audio-transcript.png" width="70%" height="auto"/>
 <br />
 </div>
 
