@@ -1,9 +1,16 @@
 ---
 layout: post
-title: Intro to Whisper paper
+title: Intro to Whisper - the paper
 ---
 
-In this article, we will go through the main concepts and findings related to the latest end-to-end speech recognition model developed by OpenAI: **[Whisper](https://cdn.openai.com/papers/whisper.pdf)**. The goal of the research was to develop a single robust speech processing system that works reliably without the need for dataset-specific fine-tuning to achieve high-quality results on those distributions. Keep this in mind while reading. Code and model weights have been published on [Github](https://github.com/openai/whisper).
+In this article, we will go through the main concepts and findings related to the latest end-to-end speech recognition model developed by OpenAI: **[Whisper](https://cdn.openai.com/papers/whisper.pdf)**.
+
+<div class="img-div-any-width" markdown="0">
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/audio-transcript.png" />
+<br />
+</div>
+
+The goal of the research was to develop a single robust speech processing system that works reliably without the need for dataset-specific fine-tuning to achieve high-quality results on those distributions. Keep this in mind while reading. Code and model weights have been published on [Github](https://github.com/openai/whisper).
 
 This article aims to summarize and simplify the paper by touching on the key concepts, explaining how the model transcribes the audio input at a high-level, and presenting the most important results in a way suitable for an audience not necessarily used to reading Machine Learning (ML) papers.
 Some code snippets will be used to show how the data is transformed across the transcription process, and to cover important concepts the authors simply referenced to. However, coding skills are not required to grasp Whisper's potential.
@@ -38,20 +45,13 @@ In this paper, it is shown that ASR models pretrained with full or weak supervis
 
 Whisper training is weakly supervised, meaning that - in most of the training dataset - the only information available is the input audio and the corresponding transcript.
 
+Models of different dimensions have been trained and evaluated, as illustrated in this table.
+
 <div class="img-div-any-width" markdown="0">
-  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/audio-transcript.png" />
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/model_card.png" />
   <br />
 
 </div>
-Models of different dimensions have been trained and evaluated, as illustrated in this table.
-
-| Model   | Parameters |
-|:--------|:-----------|
-| Tiny    | 39M        |
-| Base    | 74M        |
-| Small   | 244M       |
-| Medium  | 769M       |
-| Large   | 1550M      |
 
 The large model achieves great zero-shot results on gold standard benchmarks. We will see more about the results later on, but first let's have a look at the training data.
 
