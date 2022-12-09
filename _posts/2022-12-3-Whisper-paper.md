@@ -4,7 +4,7 @@ title: Intro to Whisper - the paper
 ---
 
 <div class="img-div-any-width" markdown="0">
-  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/audio-transcript.png" width="70%" height="auto"/>
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/front.png" width="1200px" height="627px"/>
 <br />
 </div>
 
@@ -44,6 +44,11 @@ According to the authors, this approach - although it led to models achieving st
 In this paper, it is shown that ASR models pretrained with full or weak supervision on end tasks exhibit higher robustness and generalize better. As it is well known by every Machine Learning practitioner, labeling large datasets is expensive and tedious and therefore the trade-off between quality and quantity plays a crucial role. ASR makes no exception.
 
 Whisper training is weakly supervised, meaning that - in most of the training dataset - the only information available is the input audio and the corresponding transcript.
+
+<div class="img-div-any-width" markdown="0">
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_paper/audio-transcript.png"/>
+<br />
+</div>
 
 Models of different dimensions have been trained and evaluated, as illustrated in this table.
 
