@@ -28,7 +28,7 @@ The following chapters are somewhat self-contained, meaning that they import all
 4. [Word Error Rate](#word-error-rate)
 5. [Beyond Word Error Rate](#beyond-wer)
 6. [Training](#training)
-    1. [Fine-tuning Whisper with 🤗](#fine-tuning-with-🤗)
+    1. [Fine-tuning Whisper with 🤗](#fine-tuning-whisper-with-hugging-face)
     2. [Inside the engine](#inside-the-engine)
 7. [What's next](#whats-next)
 
