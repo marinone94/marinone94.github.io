@@ -1364,107 +1364,29 @@ trainer.save_metrics("train", metrics)
 trainer.save_state()
 print(metrics)
 
-```
 
-    /usr/local/lib/python3.10/dist-packages/transformers/optimization.py:407: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
-      warnings.warn(
-
-
-
-
-    <div>
-
-      <progress value='448' max='448' style='width:300px; height:20px; vertical-align: middle;'></progress>
-      [448/448 37:35, Epoch 2/9223372036854775807]
-    </div>
-    <table border="1" class="dataframe">
-  <thead>
- <tr style="text-align: left;">
-      <th>Step</th>
-      <th>Training Loss</th>
-      <th>Validation Loss</th>
-      <th>Wer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>44</td>
-      <td>1.411100</td>
-      <td>1.491944</td>
-      <td>245.345681</td>
-    </tr>
-    <tr>
-      <td>88</td>
-      <td>1.050100</td>
-      <td>1.225460</td>
-      <td>225.882165</td>
-    </tr>
-    <tr>
-      <td>132</td>
-      <td>0.903200</td>
-      <td>1.120284</td>
-      <td>211.655756</td>
-    </tr>
-    <tr>
-      <td>176</td>
-      <td>0.814100</td>
-      <td>1.067498</td>
-      <td>184.623982</td>
-    </tr>
-    <tr>
-      <td>220</td>
-      <td>0.802900</td>
-      <td>1.039361</td>
-      <td>178.412901</td>
-    </tr>
-    <tr>
-      <td>264</td>
-      <td>0.632500</td>
-      <td>1.030140</td>
-      <td>216.637394</td>
-    </tr>
-    <tr>
-      <td>308</td>
-      <td>0.697100</td>
-      <td>1.013514</td>
-      <td>184.400447</td>
-    </tr>
-    <tr>
-      <td>352</td>
-      <td>0.605100</td>
-      <td>1.006531</td>
-      <td>194.714993</td>
-    </tr>
-    <tr>
-      <td>396</td>
-      <td>0.604700</td>
-      <td>1.002950</td>
-      <td>166.932780</td>
-    </tr>
-    <tr>
-      <td>440</td>
-      <td>0.585000</td>
-      <td>1.004960</td>
-      <td>191.234233</td>
-    </tr>
-  </tbody>
-</table><p>
+<style>
+  .image {
+    width: 33.33%;
+    max-width: 100%;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 767px) {
+    .image {
+      width: 100%;
+      float: none;
+    }
+  }
+</style>
 
 
-    ***** train metrics *****
-      epoch                    =        2.33
-      total_flos               = 163660945GF
-      train_loss               =      0.8752
-      train_runtime            =  0:37:40.84
-      train_samples_per_second =        3.17
-      train_steps_per_second   =       0.198
-    {'train_runtime': 2260.8457, 'train_samples_per_second': 3.17, 'train_steps_per_second': 0.198, 'total_flos': 1.7572960198656e+17, 'train_loss': 0.8751586728862354, 'epoch': 2.33}
-
-
-<div class="img-div-any-width" markdown="0">
-  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_hf_training/training_loss.png"/>
-  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_hf_training/eval_loss.png"/>
-  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_hf_training/eval_wer.png"/>
+<div class="imgage" markdown="0">
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_hf_training/training_loss.png" alt="tr_loss"/>
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_hf_training/eval_loss.png" alt="eval_loss"/>
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/whisper_hf_training/eval_wer.png" alt="eval_wer"/>
 <br />
 </div>
 
