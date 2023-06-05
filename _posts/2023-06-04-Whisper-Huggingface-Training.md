@@ -1363,7 +1363,7 @@ trainer.log_metrics("train", metrics)
 trainer.save_metrics("train", metrics)
 trainer.save_state()
 print(metrics)
-
+```
 
 <style>
   .image {
