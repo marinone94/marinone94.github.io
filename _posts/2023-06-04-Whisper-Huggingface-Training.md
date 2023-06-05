@@ -28,7 +28,7 @@ The following chapters are somewhat self-contained, meaning that they import all
 4. [Word Error Rate](#word-error-rate)
 5. [Beyond Word Error Rate](#beyond-wer)
 6. [Training](#training)
-    1. [Fine-tuning Whisper with 🤗](#fine-tuning-whisper-with-hugging-face)
+    1. [Fine-tuning Whisper with 🤗](#fine-tuning-whisper-with-huggingface)
     2. [Inside the engine](#inside-the-engine)
 7. [What's next](#whats-next)
 
@@ -836,7 +836,7 @@ If you are familiar with fine-tuning Speech Sequence to Sequence models with �
 
 Most of the code comes from the script provided during the 🤗 Whisper Fine-Tuning Event, but it has been slimmed to focus on the essential parts, and it will be explained along the way. In my way.
 
-### Fine-tuning Whisper with 🤗
+### Fine-tuning Whisper with HuggingFace 🤗
 
 
 To get started, let's import the required libraries.
@@ -1608,7 +1608,7 @@ As with all Deep Learning models, Whisper is trained and fine-tuned in batches. 
 
 To do so, we will instantiate a Dataloader, which will take care of loading the next batch for us. It is important to understand what happens step by step, but we cannot go into the details of each line of code and rewrite everything from scratch.
 
-The code blocks before the Dataloader instantiation are copied from the [Fine-tuning Whisper with 🤗](##fine-tuning-whisper-with-hug) chapter. You can skip it if you have run it above.
+The code blocks before the Dataloader instantiation are copied from the [Fine-tuning Whisper with 🤗](#fine-tuning-whisper-with-huggingface) chapter. You can skip it if you have run it above.
 
 
 ```python
