@@ -15,7 +15,7 @@ The goal of the research was to develop a single robust speech processing system
 This article aims to summarize and simplify the paper by touching on the key concepts, explaining how the model transcribes the audio input at a high-level, and presenting the most important results in a way suitable for an audience not necessarily used to reading Machine Learning (ML) papers.
 Some code snippets will be used to show how the data is transformed across the transcription process, and to cover important concepts the authors simply referenced to. However, coding skills are not required to grasp Whisper's potential. Still, if you want to play with the notebook that helped me write this post, it is available [here](https://github.com/marinone94/whisper-inquiry).
 
-## Table of content
+## Table of contents
 1. [Introduction](#introduction)
 2. [Datasets](#datasets)
 3. [Model architecture](#model)

@@ -15,11 +15,22 @@ Since the scope of the article is to learn about the training process, we will f
 
 ## How to read this article
 
-This article follows a quite standard flow and starts by introducing the dataset - loaded in streaming mode - and the evaluation metric. Then, it will dive deep into the training chapter, which is made of two sections. The first one is a step-by-step guide on how to fine-tune the model using the 🤗 Trainer. The second one looks inside the engine and explains what happens in a single training step: loading a data batch, forward pass, loss computation, backpropagation, and optimization. It does not use the 🤗 Trainer, instead, it is implemented in PyTorch. Of course, you should read both! But if you are just interested in getting a fine-tuning job to work, then skip the second section. If instead you are just curious to know what happens inside the engine but you don't plan to fine-tune the model using the 🤗 Trainer any time soon, then get back to the first section when the time comes!
+This article follows a quite standard flow and starts by introducing the dataset - loaded in streaming mode - and the evaluation metric. Then, it will dive deep into the training chapter, which is made up of two sections. The first one is a step-by-step guide on how to fine-tune the model using the 🤗 Trainer. The second one looks inside the engine and explains what happens in a single training step: loading a data batch, forward pass, loss computation, backpropagation, and optimization. It does not use the 🤗 Trainer, instead, it is implemented in PyTorch. Of course, you should read both! But if you are just interested in getting a fine-tuning job to work, then skip the second section. If instead you are just curious to know what happens inside the engine but you don't plan to fine-tune the model using the 🤗 Trainer any time soon, then get back to the first section when the time comes!
 
-I strongly advise you to play with the [notebook](link) to truly understand all the bits and pieces. To smoothly run the code, you can follow the instructions in the [Environment setup](##environment-setup) chapter.
+I strongly advise you to play with the [notebook](https://github.com/marinone94/whisper-inquiry/blob/main/src/whisper_training/huggingface_training.ipynb) to truly understand all the bits and pieces. To smoothly run the code, you can follow the instructions in the [Environment setup](#environment-setup) chapter.
 
 The following chapters are somewhat self-contained, meaning that they import all the required packages and define (and re-define) methods and classes so that they can run independently from each other.
+
+## Table of contents
+1. [How to read this article](#how-to-read-this-article)
+2. [Environment setup](#environment-setup)
+3. [Training dataset](#training-dataset)
+4. [Word Error Rate](#word-error-rate)
+5. [Beyond Word Error Rate](#beyond-wer)
+6. [Training](#training)
+    1. [Fine-tuning Whisper with 🤗](#fine-tuning-with-🤗)
+    2. [Inside the engine](#inside-the-engine)
+7. [What's next](#whats-next)
 
 ## Environment setup
 
@@ -1446,7 +1457,7 @@ model = AutoModelForSpeechSeq2Seq.from_pretrained(model_id).to(device)
 processor = AutoProcessor.from_pretrained("openai/whisper-tiny")
 ```
 
-The following code block is copied from the [Training dataset](##training-dataset) chapter. You can skip it if you have run it above.
+The following code block is copied from the [Training dataset](#training-dataset) chapter. You can skip it if you have run it above.
 
 
 
@@ -1506,7 +1517,7 @@ def transcribe(sample, return_pred_and_ref=False, print_results=False):
 
 ```
 
-The following code block is copied from the [Word Error Rate](##word-error-rate) chapter. You can skip it if you have run it above.
+The following code block is copied from the [Word Error Rate](#word-error-rate) chapter. You can skip it if you have run it above.
 
 
 ```python
