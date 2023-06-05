@@ -1,3 +1,8 @@
+---
+layout: post
+title: Training Whisper with Huggingface 🤗
+---
+
 # Training Whisper with Huggingface 🤗
 
 In my previous article, we learned about the new end-to-end speech recognition model developed by OpenAI: Whisper.
