@@ -98,9 +98,7 @@ repo_url = f"https://huggingface.co/{hf_user}/{repo_name}"
 !echo {repo_url}
 ```
 
-```
 https://huggingface.co/marinone94/whisper-training-blog
-```
 
 
 ```python
