@@ -3,8 +3,6 @@ layout: post
 title: Training Whisper with Huggingface 🤗
 ---
 
-# Training Whisper with Huggingface 🤗
-
 In my previous article, we learned about the new end-to-end speech recognition model developed by OpenAI: Whisper.
 
 Today, we will go through the steps required to fine-tune a Whisper model using several Huggingface libraries. Furthermore, we will explore how the Huggingface libraries take care of all the different steps under the hood, and how the model learns from the training examples.
