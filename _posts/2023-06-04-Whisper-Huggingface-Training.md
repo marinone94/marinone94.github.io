@@ -331,33 +331,6 @@ pprint(sample)
 
 So, the `audio` feature is a dictionary containing the audio waveform stored as numpy array, the file path, and the sampling rate. The `raw_transcription` feature is a string containing the transcription of the audio file. Let's listen to it.
 
-
-```python
-# This download function is used to embed the files in the blog post.
-import os
-
-from scipy.io.wavfile import write
-
-def save_wav(data, filename, sample_rate, overwrite=False):
-    # Create dir if missing
-    if not os.path.exists(filename) or overwrite is True:
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
-        write(filename, sample_rate, data)
-        print(f"Saved {filename} with sampling rate {sample_rate}")
-    else:
-        print(f"File {filename} already exists. Skipping.")
-
-```
-
-
-```python
-# Notebook visualization
-from IPython.display import Audio
-
-print(sample["raw_transcription"])
-Audio(sample["audio"]["array"], rate=sample["audio"]["sampling_rate"])
-```
-
     Ripströmmar är det återvändande flödet från vågor som bryter av vid stranden, ofta vid ett rev eller liknande.
 
 
@@ -836,7 +809,7 @@ If you are familiar with fine-tuning Speech Sequence to Sequence models with �
 
 Most of the code comes from the script provided during the 🤗 Whisper Fine-Tuning Event, but it has been slimmed to focus on the essential parts, and it will be explained along the way. In my way.
 
-### Fine-tuning Whisper with HuggingFace 🤗
+### Fine-tuning Whisper with HuggingFace
 
 
 To get started, let's import the required libraries.
