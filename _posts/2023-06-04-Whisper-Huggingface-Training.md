@@ -336,7 +336,7 @@ So, the `audio` feature is a dictionary containing the audio waveform stored as 
 
 <div class="audio-div-any-width" markdown="0">
 <audio controls width="100%" height="auto">
-  <source src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/audio/whisper_hf_training/random_sample.wav" type="audio/wav">
+  <source src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/audio/whisper_hf_training/random_sample.flac" type="audio/flac">
 Your browser does not support the audio element.
 </audio>
 </div>
