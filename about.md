@@ -14,5 +14,5 @@ This is a journey for me, and I will do tons of mistakes. Only through your feed
 Self-supervised learning is great, but as I don't have access to TBs of data (nor the computational capacity to process it) a bit of supervision won't cause any harm.
 
 ### Contact me
-For any feedback, request, or comment, please open a [PR](https://github.com/marinone94/marinone94.github.io/pulls) or reach out on Linkedin or via email.
+For any feedback, request, or comment, please open a [PR](https://github.com/marinone94/marinone94.github.io/pulls) or reach out on Linkedin or via email at 
 [marinone94@gmail.com](mailto:marinone94@gmail.com)
