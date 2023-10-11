@@ -3,13 +3,7 @@ layout: post
 title: From Los Angeles to Language Agents, from LA to CoALA.
 ---
 
-What was the first thing anyone was thinking about when hearing LA in the 20th century? Undoubtly, Los Angeles. By the end of this century, possibly this decade, the first thing anyone will think about will be Language Agents. Sorry, city of angels. On September 5th, 2023, researchers from Princeton University published a foundational paper on arXiv: [Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427) (CoALA). 
-
-<div class="img-div-any-width" markdown="0" width="30%">
-  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/coala/los_angeles_language_agents.jpeg"/>
-<br />
-</div>
-
+What was the first thing anyone was thinking about when hearing LA in the 20th century? Undoubtly, Los Angeles. By the end of this century, possibly this decade, the first thing anyone will think about will be Language Agents. Sorry, city of angels. On September 5th, 2023, researchers from Princeton University published a foundational paper on arXiv: [Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427) (CoALA).
 
 *Language Agents* (LA) are systems that leverage *Large Language Models* (LLMs) to interact with the world. The work introduces a standardized, general architecture for Language Agents. Built on top of cognitive science and symbolic AI, CoALA presents a conceptual framework that organizes existing agents and sets conventions for naming the same thing the same way; as well, it suggests the way forward for a modular architecture that will enable standard protocols definition and open source implementations to be released and adopted at scale.
 
@@ -28,8 +22,9 @@ What was the first thing anyone was thinking about when hearing LA in the 20th c
 5. [Decision-making](#decision-making)
   * [Planning](#planning)
   * [Execution](#execution)
-6. [Conclusions](#conclusions)
-7. [Next steps](#next-steps)
+6. [Overview](#overview)
+7. [Conclusions](#conclusions)
+8. [Next steps](#next-steps)
 
 ## Introduction
 Agents that need to interact with the external world in a semi-autnonomous way do so in two main phases: planning, and executing. The main procedure is a loop that receives tasks or signals from the external world, and selects the next step according to the decision-making logic implemented in the Agent's source code.
@@ -128,6 +123,14 @@ An underexplored approach is to use LLMs to generate a textual explanation, and 
 
 ### Execution
 The selected action is executed in the external environment. The feedback is parsed and stored in the Working memory. This will ignite another cycle.
+
+## Overview
+After looking closer at each module, it is worth making a step back again and look at the big picture. The following diagram shows the different modules and their interactions.
+
+<div class="img-div-any-width" markdown="0">
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/coala/CoALA_overview.PNG"/>
+<br />
+</div>
 
 ## Actionable insights
 The paper comes with a bunch of actionable insights that I will summairse here.
