@@ -6,7 +6,7 @@ title: From Los Angeles to Language Agents, from LA to CoALA.
 What was the first thing anyone was thinking about when hearing LA in the 20th century? Undoubtedly, Los Angeles. By the end of this century, possibly this decade, the first thing anyone will think about will be Language Agents. Sorry, city of angels. On September 5th, 2023, researchers from Princeton University published a foundational paper on arXiv: [Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427) (CoALA).
 
 <div class="img-div-any-width" markdown="0" width="30%" style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/coala/los_angeles_language_agents.PNG"/>
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/coala/los_angeles_language_agents.jpeg"/>
 <br />
 </div>
 
