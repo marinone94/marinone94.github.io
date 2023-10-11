@@ -3,7 +3,7 @@ layout: post
 title: From Los Angeles to Language Agents, from LA to CoALA.
 ---
 
-<div class="img-div-any-width" markdown="0" width="1200px" height="627px">
+<div class="img-div-any-width" markdown="0" style="width: 30%;">
   <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/coala/los_angeles_language_agents.jpeg"/>
 <br />
 </div>
