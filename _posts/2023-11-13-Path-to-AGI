@@ -3,19 +3,29 @@ layout: post
 title: "Exploring the Path to Artificial General Intelligence: Insights from Google DeepMind's Framework"
 ---
 
-Artificial General Intelligence (AGI) has long been a concept bordering on science fiction. However, with rapid advancements in Machine Learning and AI, what was once a subject of philosophical debate is now a matter of practical significance. Google DeepMind, a leading player in the field, has recently introduced [a comprehensive framework for classifying AGI models](https://arxiv.org/abs/2311.02462), analogous to the levels of autonomous driving. This framework not only serves to measure progress towards AGI but also provides a common language for comparing models and assessing risks.
+Artificial General Intelligence (AGI) has long been a concept bordering on science fiction. However, with rapid advancements in Machine Learning and AI, what was once a subject of philosophical debate is now a matter of practical significance. Google DeepMind, probably one of the top 3 AI labs worldwide, has just introduced [a comprehensive framework for classifying AGI models](https://arxiv.org/abs/2311.02462), analogous to the levels of autonomous driving. This framework not only serves to measure progress toward AGI but also provides a common language for comparing models and assessing risks.
 
 The concept of AGI is complex, often leading to various interpretations among experts. AGI is generally used to describe an AI system that can perform any intellectual task that a human being can. However, as DeepMind's paper illustrates, ask a hundred AI experts to define AGI, and you'll likely receive a hundred different definitions. This ambiguity necessitates a standard framework to objectively assess and understand the progress in AGI development.
 
 If you just want to read the Six Principles introduced, you can jump to [DeepMind's AGI Framework: The Six Foundational Principles](#deepminds-agi-framework-the-six-foundational-principles). You can save some more time by reading only the bolded **For Dummies** highlights.
-If you do, well, I hope you will give yourself the time to read the whole article and the paper shortly. It's worth it.
+If you decide to do so, well, I hope you will give yourself the time to read the whole article and the paper shortly. It's worth it.
+
+# Table of Contents
+1. [A touch of history](#a-touch-of-history)
+2. [DeepMind's AGI Framework: The Six Foundational Principles](#deepminds-agi-framework-the-six-foundational-principles)
+3. [The Levels of AGI: A Nuanced Categorization](#the-levels-of-agi-a-nuanced-categorization)
+4. [Generality Spectrum](#generality-spectrum)
+5. [Testing for AGI](#testing-for-agi)
+6. [Risk in Context: Autonomy and Human-AI Interaction](#risk-in-context-autonomy-and-human-ai-interaction)
+7. [My (worthless) two cents](#my-worthless-two-cents)
+8. [Epilogue](#epilogue)
 
 # A touch of history
 The journey towards comprehending Artificial General Intelligence (AGI) is paved with diverse definitions and conceptualizations. Google DeepMind's paper presents nine case studies, each offering a unique perspective on AGI:
 
 1. **The Turing Test:** Initially proposed by Alan Turing in 1950, this test evaluates if a machine can convincingly imitate human behavior. While the Turing Test has been passed by modern Large Language Models (LLMs), it's critiqued for highlighting the ease of deceiving humans rather than assessing true machine intelligence. Thus, the paper argues for a focus on capabilities rather than processes in defining AGI.
 
-2. **Strong AI – Systems Possessing Consciousness:** Philosopher John Searle's concept of strong AI considers computers as not just tools but as entities with minds and cognitive states. However, the lack of consensus on how to measure consciousness in machines makes this approach impractical for AGI.
+2. **Strong AI – Systems Possessing Consciousness:** Philosopher John Searle's concept of strong AI considers computers as not just tools but entities with minds and cognitive states. However, the lack of consensus on how to measure consciousness in machines makes this approach impractical for AGI.
 
 3. **Analogies to the Human Brain:** Mark Gubrud's 1997 definition of AGI involves AI systems rivaling or surpassing human brain complexity. While modern machine learning systems draw inspiration from neural networks, the success of non-brain-like architectures like transformers suggests that brain-based benchmarks are not essential for AGI.
 
@@ -34,7 +44,7 @@ The journey towards comprehending Artificial General Intelligence (AGI) is paved
 Each case study gives us a different way to look at AGI, helping us get a better and more detailed picture of this complicated area. The paper uses these studies to support its idea of creating different levels for understanding AGI, mixing the complex nature of human intelligence with the real-world abilities of AI.
 
 # DeepMind's AGI Framework: The Six Foundational Principles
-DeepMind's framework is anchored on six pivotal principles, each contributing a critical dimension to the understanding of AGI:
+DeepMind's framework is anchored on six principles, each contributing a critical dimension to the understanding of AGI:
 
 1. **Capabilities Over Processes:**
 Focusing on the achievements of AGI rather than the underlying processes, this principle advocates assessing AGI based on its outcomes. It stresses the importance of the results over the means employed to attain them. **For Dummies: It's about what AGI can achieve, not how it gets there.**
@@ -58,7 +68,7 @@ Emphasizing the evolutionary path of AGI, this principle focuses on the progress
 
 # The Levels of AGI: A Nuanced Categorization
 
-DeepMind’s framework introduces a nuanced categorization of AGI into levels based on performance and generality, providing a more granular understanding of AGI's developmental stages:
+DeepMind’s framework also introduces a nuanced categorization of AGI into levels based on performance and generality, providing a more granular understanding of AGI's developmental stages:
 
 0. **No AI:**
 Representing the absence of AI capabilities, this level serves as the baseline against which AI development is measured.
@@ -86,17 +96,34 @@ The combination of these levels of performance and generality dimensions provide
 # Testing for AGI
 The paper then addresses the challenges in benchmarking AGI. Traditional AI benchmarks, often task-specific and narrow, fall short in evaluating AGI's broader capabilities.
 
-The authors discuss how their six proposed principles for defining AGI inform the creation of a matrixed leveled ontology to assess AI capabilities. They emphasize the need for a benchmark that includes a broad suite of cognitive and metacognitive tasks, encompassing diverse aspects like linguistic intelligence, mathematical and logical reasoning, spatial reasoning, social intelligences, learning new skills, and creativity.
+The authors discuss how their six proposed principles for defining AGI inform the creation of a matrixed leveled ontology to assess AI capabilities. They emphasize the need for a benchmark that includes a broad suite of cognitive and metacognitive tasks, encompassing diverse aspects like linguistic intelligence, mathematical and logical reasoning, spatial reasoning, social intelligence, learning new skills, and creativity.
 
-The chapter also raises questions about the set of tasks that constitute the generality criteria for AGI and the proportion of these tasks an AI system must master to achieve a certain level of generality. It suggests that the benchmark should include open-ended and interactive tasks, which, despite being challenging to measure, offer better ecological validity than traditional AI metrics. The authors propose that an AGI benchmark should be a living benchmark, adaptable to include new tasks and evolving standards.
-
-The process of establishing an AGI benchmark is described as challenging and iterative, requiring a wide range of perspectives and cross-disciplinary collaboration. The ultimate goal of this endeavor is to help the AI research community define and measure progress towards AGI more clearly, despite the inherent imperfections in measuring such complex concepts
+The chapter also raises questions about the set of tasks that constitute the generality criteria for AGI and the proportion of these tasks an AI system must master to achieve a certain level of generality. It suggests that the benchmark should include open-ended and interactive tasks, which, despite being challenging to measure, offer better ecological validity than traditional AI metrics. The authors propose that an AGI benchmark should be a living benchmark, adaptable to include new tasks and evolving standards, despite the inherent imperfections in measuring such complex concepts.
 
 # Risk in Context: Autonomy and Human-AI Interaction
 
 Last, the paper highlights the importance of considering risk, including existential risks ("x-risk"), in the context of AGI development. It emphasizes the criticality of carefully chosen human-AI interaction paradigms for the safe and responsible deployment of advanced AI models. The authors underline the significance of sometimes opting for a "No AI" paradigm, particularly in situations where AI's involvement may not be desirable or safe, such as in certain educational, recreational, assessment, or safety-sensitive contexts.
 
-Furthermore, the section discusses how the principles and ontology proposed in the document can reshape the conversation around the risks associated with AGI. It's noted that AGI and autonomy are not synonymous; the document introduces "Levels of Autonomy" that are enabled by but not determined by AGI's progression. This distinction allows for a more nuanced understanding of the risks associated with AI systems and underscores the necessity of concurrent advancements in human-AI interaction research and AI model development​. You should refer to the paper for a detailed presentation of the Levels of Autonomy.
+Furthermore, the section discusses how the principles and ontology proposed in the document can reshape the conversation around the risks associated with AGI. It's noted that AGI and autonomy are not synonymous; the document introduces "Levels of Autonomy" that are enabled by but not determined by AGI's progression. This distinction allows for a more nuanced understanding of the risks associated with AI systems and underscores the necessity of concurrent advancements in human-AI interaction research and AI model development​. You should refer to the paper for a detailed presentation of the Levels of Autonomy, as this article is - once again - way too long.
+
+# My (worthless) two cents
+The paper raises important considerations regarding the capabilities and classification of AGI systems. One key point of discussion is whether the ability to control physical actuators should be a criterion for AGI. The paper suggests that while physical capabilities, such as the ability to manipulate objects or perform tasks in the physical world, can enhance the generality of an AI system, they are not deemed essential prerequisites for achieving AGI​​.
+
+In light of this, I would argue that a comprehensive framework for AGI should not dismiss the importance of physical interaction capabilities. The ability to interact with and manipulate the physical environment is a crucial aspect of intelligence. We distinguish between humans and other animals based on our ability to control the physical environment at least as much as our cognitive skills. Thus, I would suggest that the framework should include a category for physical interaction capabilities, which can be further divided into fine motor skills (e.g., manipulating objects) and gross motor skills (e.g., locomotion).
+
+Additionally, the discussion on the generality spectrum in the DeepMind paper seems somewhat limited. To enhance this spectrum, I propose several categories for consideration:
+
+1. **Single Task vs Multi-Task Capability:** Evaluating whether an AI system is specialized in a single task or capable of handling multiple tasks.
+
+2. **Zero-Shot Learning vs Re-training:** Assessing whether the AI can adapt to new tasks without prior training or if it requires re-training for each or some of the new tasks it encounters.
+
+3. **Single Modality vs Multimodal I/O:** Considering if the AI can process and respond to only one type of input and produce only one kind of output or if it can handle multiple modalities (e.g., visual, auditory, textual).
+
+4. **Digital vs Physical Output:** Distinguishing between AI systems that only interact in digital formats and those capable of producing physical outputs.
+
+5. **LAST, AND MOST IMPORTANT, Models vs Systems:** Comparing pears with pears and apples with apples (a.k.a comparing Models with Models and Systems with Systems). We should once and for all agree to distinguish the Model evaluation and the System evaluation. Comparing Systems (usually accessible via proprietary APIs whose underlying code is not publicly disclosed) with standalone models is like comparing pears with apples, and we are taught in primary school that's not the best way to do science. And we see it happening way too often.
+
+Incorporating these categories would provide an even more nuanced and comprehensive understanding of AGI's capabilities, aligning the framework with the multifaceted nature of intelligence and its applications. Happy to discuss this further with anyone interested. Just reach out!
 
 # Epilogue
 In this era of rapid AI advancements, frameworks like DeepMind's are not just useful; they're essential. They guide researchers, developers, and policymakers through the complex landscape of AGI, ensuring that as we march towards this new frontier, we do so with our eyes wide open to both the opportunities and the challenges that lie ahead. What an exciting time to be alive!
