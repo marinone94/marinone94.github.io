@@ -3,11 +3,16 @@ layout: post
 title: "Exploring the Path to Artificial General Intelligence: Insights from Google DeepMind's Framework"
 ---
 
+<div class="img-div-any-width" markdown="0" style="width: 50%; margin: 0 auto;">
+  <img src="https://raw.githubusercontent.com/marinone94/marinone94.github.io/master/assets/img/path_to_agi/main_img.png"/>
+<br />
+</div>
+
 Artificial General Intelligence (**AGI**) has long been a concept bordering on science fiction. However, with rapid advancements in Machine Learning and AI, what was once a subject of philosophical debate is now a matter of practical significance. **Google DeepMind**, probably one of the top 3 AI labs worldwide, has just introduced [a comprehensive framework for classifying AGI models](https://arxiv.org/abs/2311.02462), analogous to the levels of autonomous driving. This framework not only serves to measure progress toward AGI but also provides a common language for comparing models and assessing risks.
 
 The concept of AGI is complex, often leading to various interpretations among experts. AGI is generally used to describe an AI system that can perform any intellectual task that a human being can. However, as DeepMind's paper illustrates, ask a hundred AI experts to define AGI, and you'll likely receive a hundred different definitions. This ambiguity necessitates a standard framework to objectively assess and understand the progress in AGI development.
 
-In this article, I try to sum up the most important parts of the paper. It will be pretty much "bullet-pointed", but it feels like the best way to convey the message. I will also add my two cents at the end of the article. I hope you will enjoy it.
+In this article, I try to sum up the most important parts of the paper. It will be pretty much "bullet-pointish", but it feels like the best way to convey the message. I will also add my two cents at the end of the article. I hope you will enjoy it.
 
 If you just want to read the Six Principles introduced, you can jump to **[DeepMind's AGI Framework: The Six Foundational Principles](#deepminds-agi-framework-the-six-foundational-principles)**. You can save some more time by reading only the bolded **For Dummies** highlights.
 If you decide to do so, well, I hope you will give yourself the time to read the whole article and the paper shortly. It's worth it.
@@ -93,7 +98,7 @@ The pinnacle of AGI development, where AI capabilities surpass those of nearly a
 5. **Superhuman:**
 It simply outperforms 100% of humans (e.g.: AlphaFold in protein folding is a Narrow ASI). General ASIs might also be able to perform cognitive tasks that no human is capable of (e.g.: to speak with animals).
 
-# Generality Spectrum
+## Generality Spectrum
 The framework also introduces a Generality spectrum, ranging from 'Narrow' (specialized in specific tasks) to 'General' (capable across a wide range of tasks). This spectrum provides a measure of AGI's versatility and adaptability.
 
 The combination of these levels of performance and generality dimensions provides a comprehensive framework to classify AGI systems. It allows for a nuanced understanding of where a particular AI system stands in terms of its capabilities and how close it is to achieving a more generalized intelligence comparable to human capabilities.
