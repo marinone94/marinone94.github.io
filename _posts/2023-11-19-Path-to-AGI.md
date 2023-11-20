@@ -137,7 +137,7 @@ Additionally, the discussion on the generality spectrum in the DeepMind paper se
 
 5. **Single vs Multiple Agents:** Evaluating whether the AI system is a single agent or a multi-agent system.
 
-5. **LAST, AND MOST IMPORTANT, Models vs Systems:** Comparing pears with pears and apples with apples (a.k.a comparing Models with Models and Systems with Systems). We should once and for all agree to distinguish the Model evaluation and the System evaluation. Comparing Systems (usually accessible via proprietary APIs whose underlying code is not publicly disclosed) with standalone models is like comparing pears with apples, and we are taught in primary school that's not the best way to do science. And we see it happening way too often.
+6. **LAST, AND MOST IMPORTANT, Models vs Systems:** Comparing pears with pears and apples with apples (a.k.a comparing Models with Models and Systems with Systems). We should once and for all agree to distinguish the Model evaluation and the System evaluation. Comparing Systems (usually accessible via proprietary APIs whose underlying code is not publicly disclosed) with standalone models is like comparing pears with apples, and we are taught in primary school that's not the best way to do science. And we see it happening way too often.
 
 Incorporating these categories would provide an even more nuanced and comprehensive understanding of AGI's capabilities, aligning the framework with the multifaceted nature of intelligence and its applications. Happy to discuss this further with anyone interested. Just reach out!
 
