@@ -110,6 +110,10 @@ The authors discuss how their six proposed principles for defining AGI inform th
 
 The chapter also raises questions about the set of tasks that constitute the generality criteria for AGI and the proportion of these tasks an AI system must master to achieve a certain level of generality. It suggests that the benchmark should include open-ended and interactive tasks, which, despite being challenging to measure, offer better ecological validity than traditional AI metrics. The authors propose that an AGI benchmark should be a living benchmark, adaptable to include new tasks and evolving standards, despite the inherent imperfections in measuring such complex concepts.
 
+They also raise an open question: when benchmarking performance, should AIs be allowed to use tools, including potentially AI-powered tools? Most likely, this choice should be task-dependent. 
+
+One final note: systems that pass the large MAJORITY of the tasks associated with a certain AGI level should be considered to have reached such a level.
+
 ## Risk in Context: Autonomy and Human-AI Interaction
 
 Last, the paper highlights the importance of considering risk, including existential risks ("x-risk"), in the context of AGI development. It emphasizes the criticality of carefully chosen human-AI interaction paradigms for the safe and responsible deployment of advanced AI models. The authors underline the significance of sometimes opting for a "No AI" paradigm, particularly in situations where AI's involvement may not be desirable or safe, such as in certain educational, recreational, assessment, or safety-sensitive contexts.
@@ -130,6 +134,8 @@ Additionally, the discussion on the generality spectrum in the DeepMind paper se
 3. **Single Modality vs Multimodal I/O:** Considering if the AI can process and respond to only one type of input and produce only one kind of output or if it can handle multiple modalities (e.g., visual, auditory, textual).
 
 4. **Digital vs Physical Output:** Distinguishing between AI systems that only interact in digital formats and those capable of producing physical outputs.
+
+5. **Single vs Multiple Agents:** Evaluating whether the AI system is a single agent or a multi-agent system.
 
 5. **LAST, AND MOST IMPORTANT, Models vs Systems:** Comparing pears with pears and apples with apples (a.k.a comparing Models with Models and Systems with Systems). We should once and for all agree to distinguish the Model evaluation and the System evaluation. Comparing Systems (usually accessible via proprietary APIs whose underlying code is not publicly disclosed) with standalone models is like comparing pears with apples, and we are taught in primary school that's not the best way to do science. And we see it happening way too often.
 
